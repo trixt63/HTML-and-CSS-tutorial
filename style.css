@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("fonts/Booter\ -\ Zero\ Zero.woff") format("woff"),
+         url("fonts/Booter\ -\ Zero\ Zero.woff2") format("woff2"); /* if the browser does not accept the first formant, it will go to the second */
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Raleway ;
+    color: #777;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    background-image: url("images/Header Background.jpg");
+    background-color: rgba(0, 0, 0, .6);
+    background-blend-mode: multiply; /* use both background-image and background-color */
+    background-size: cover; /*ảnh được co để vừa với phần tử chứa, tuy nhiên ảnh bị cắt nếu kích thước không cùng tỷ lệ với phần tử chứa.*/
+}
+
+.nav ul {
+    margin: 0;
+}
+
+.nav li {
+    display: inline; /*so that all list items are on the same line*/
+}
+
+.nav a {
+    display: inline-block; /*so that the list items can have padding, etc*/
+    padding: .5em;
+    color: white;
+    text-decoration: none; /* remove the underline */
+}
+
+.nav a:hover {
+    background-color: rgba(255,255,255,.3); 
+}
+
+.main-nav {
+    text-align: center; /* make all the text at the center */
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255,255,255,.3); /* add a ruler under the nav */
+}
+
+.main-nav li {
+    padding: 0 5%;  /* make the items spaced out for each other */
+}
+
+.band-name {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: "Booter - Zero Zero";
+    font-weight: normal; /*because h1 tag bold the text*/
+    color: white;
+}
+
+.band-name-large {
+    font-size: 9em; /* make the band-name bigger */
+}
+
+.content-section {
+    margin: 1em;
+}
+
+
+/* Make the site responsive: even when the site is stretched, the contents remain in the center */
+.container {
+    max-width: 900px;
+    margin: 0 auto; /* to center the paragraph*/
+    padding: 0 1.5em; 
+}
+
+.section-header {
+    font-family: "Metal Mania";
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.about-band-image {
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+    border-radius: 50%; /* make a perfect circle */
+}
+
+.main-footer {
+    background-color: #56ccf2;
+    color: white;
+    padding: .25em 0;
+}
+
+
+.main-footer-container {
+    display: flex;
+    align-items: center; /* make the band name to be at the horizontal center */
+}
+
+.main-footer-container ul {
+    flex-grow: 1; /* make the left (the facebook-youtube-soundcloud) to be as big as possible*/
+    text-align: end;
+}
+
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+.footer-nav img {
+    width: 30px;
+    height: 30px;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em; /* make a litter space between the text inside and the edge of the button */
+    cursor: pointer;
+}
+
+.btn-header { /* make the button to be a litte offset to the left */
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid aqua;
+    background-color: rgba(255,255,255,.1);
+    border-radius: 10;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255,255,255,.3);
+}
+
+.btn-play {
+    margin: 0 auto;
+    display: block; /* the button element does not have auto-padding, so we need to make it a block element to get around thist */
+    color: aqua;
+    font-size: 4em;
+    border-radius: 50%; 
+    padding: 0;
+    width: 100px;
+    height:100px;
+}
+
+.tour-row {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.tour-row:last-child { /* make the last item in the list different */
+    border-bottom: none;
+}
+
+.tour-item {
+    padding-right: .5em;
+    display: inline-block;
+    width: 11%;
+}
+
+.tour-date {
+    color:#555;
+    font-weight: bold;
+    width: 11%;
+}
+
+.tour-city {
+    width: 24%;
+}
+
+.tour-arena {
+    width: 42%;
+}
+
+.tour-btn {
+    max-width: 15%;
+}
+
+.btn-primary {
+    color: white;
+    background-color: aqua; 
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: darkcyan;
+}
+
+.shop-item {
+    margin: 30px;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.shot-item-image {
+    height: 250px;
+}
+
+.shop-item-details {
+    display: flex; /* center the items vertically */
+    align-items: center;
+    padding: 5px; /* make the button not touch the above image */
+}
+
+.shop-item-price {
+    flex-grow: 1; /*shove the button beside all the way to the right */
+    color: #333;
+}
+
+.shop-items {
+    display: flex; /* make the site responsive */
+    flex-wrap: wrap;
+    justify-content: space-around; /*put an even amount of space between every single element*/
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em; /* make space between items */
+    padding-bottom: 10px;
+    margin:top 10px;
+}
+
+.cart-row {
+    display: flex;
+
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: coral;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover{
+    background-color: red;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid aqua;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold; 
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
